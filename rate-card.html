@@ -1,0 +1,1812 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velnex Design and Marketing Signature Service Rate Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #526071;
+      --line: #d8e0ea;
+      --navy: #082a5f;
+      --blue: #0a66c2;
+      --copper: #b7793f;
+      --paper: #ffffff;
+      --soft: #f4f7fb;
+      --screen-page-width: 794px;
+      --screen-page-height: 1123px;
+      --print-page-width: 210mm;
+      --print-page-height: 297mm;
+      --page-scale: 1;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: #e9eef5;
+      color: var(--ink);
+      font-family: "Manrope", Arial, Helvetica, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      margin: 0;
+      background: #e9eef5;
+    }
+
+    .document { width: 100%; }
+
+    .page-shell {
+      width: var(--screen-page-width);
+      height: var(--screen-page-height);
+      margin: 0 auto 24px;
+    }
+
+    .page-shell.hidden-page {
+      display: none !important;
+    }
+
+    .page {
+      width: var(--screen-page-width);
+      height: var(--screen-page-height);
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.16);
+      break-after: page;
+      page-break-after: always;
+      break-inside: avoid;
+      page-break-inside: avoid;
+      transform-origin: top left;
+    }
+
+    .page:last-child {
+      break-after: auto;
+      page-break-after: auto;
+    }
+
+    @media screen {
+      body { padding: 24px 0; }
+
+      .page-shell {
+        width: calc(var(--screen-page-width) * var(--page-scale));
+        height: calc(var(--screen-page-height) * var(--page-scale));
+      }
+
+      .page { transform: scale(var(--page-scale)); }
+    }
+
+    .pdf-action {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+      border: 0;
+      border-radius: 6px;
+      background: var(--navy);
+      color: #ffffff;
+      padding: 11px 15px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.22);
+    }
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 58px 54px 48px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.18), transparent 32%),
+        linear-gradient(145deg, #082a5f 0%, #0c3b7d 46%, #0a66c2 100%);
+    }
+
+    .brand {
+      max-width: 520px;
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .cover-main {
+      margin: auto 0;
+      transform: translateY(-18px);
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--copper);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .cover .kicker {
+      color: #f2c36d;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 620px;
+      font-size: 56px;
+      line-height: 0.98;
+      letter-spacing: -0.025em;
+      font-weight: 800;
+    }
+
+    .cover-note {
+      margin: 24px 0 0;
+      max-width: 560px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 46px 48px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 34px;
+      line-height: 1.06;
+      letter-spacing: -0.015em;
+      font-weight: 700;
+    }
+
+    .page-number {
+      color: #d8dee8;
+      font-size: 46px;
+      line-height: 0.9;
+      font-weight: 800;
+    }
+
+    .page-body {
+      padding: 34px 48px 52px;
+    }
+
+    .intro {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.18;
+      font-weight: 700;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.42;
+      font-weight: 500;
+    }
+
+    .card ul,
+    .list {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.28;
+      font-weight: 600;
+    }
+
+    .wide { grid-column: 1 / -1; }
+
+    .vision-mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .vision-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 690px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 32px;
+    }
+
+    .vision-card h3 {
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.015em;
+      font-weight: 700;
+    }
+
+    .vision-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .vision-page {
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 14% 78%, rgba(10, 102, 194, 0.34), transparent 34%),
+        radial-gradient(circle at 88% 12%, rgba(212, 175, 55, 0.16), transparent 30%),
+        linear-gradient(145deg, #030915 0%, #071e47 52%, #082a5f 100%);
+    }
+
+    .vision-layout {
+      position: relative;
+      height: 100%;
+      padding: 56px 54px 44px;
+    }
+
+    .vision-title {
+      margin: 0;
+      max-width: 520px;
+      color: #ffffff;
+      font-size: 56px;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .vision-title span {
+      display: block;
+    }
+
+    .vision-layout .mission-card,
+    .vision-layout .vision-card {
+      position: absolute;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .vision-layout .mission-card {
+      left: 54px;
+      bottom: 92px;
+      width: 315px;
+      min-height: 485px;
+      color: var(--ink);
+      background: #ffffff;
+    }
+
+    .vision-layout .vision-card {
+      right: 54px;
+      top: 190px;
+      width: 330px;
+      min-height: 520px;
+      border: 2px solid rgba(212, 175, 55, 0.85);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .vision-layout h3 {
+      margin: 0 0 16px;
+      font-size: 26px;
+      line-height: 1;
+      letter-spacing: -0.015em;
+      font-weight: 700;
+    }
+
+    .vision-layout .mission-card h3 {
+      color: var(--ink);
+    }
+
+    .vision-layout .vision-card h3 {
+      color: #ffffff;
+    }
+
+    .vision-layout p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .vision-layout .mission-card p {
+      color: #6a7280;
+    }
+
+    .vision-layout .vision-card p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .vision-page-pill {
+      position: absolute;
+      right: 54px;
+      bottom: 44px;
+      min-width: 56px;
+      padding: 8px 14px;
+      border: 2px solid rgba(255, 255, 255, 0.86);
+      border-radius: 999px;
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .services-overview-page .page-header {
+      padding-top: 58px;
+      border-bottom: 0;
+    }
+
+    .services-overview-page h2 {
+      font-size: 64px;
+      line-height: 0.95;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+    }
+
+    .icon-service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 42px;
+      padding: 42px 20px 0;
+    }
+
+    .service-group-label {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 4px;
+      color: #9a663b;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .service-group-label::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .service-group-label.development,
+    .service-group-label.marketing {
+      margin-top: 14px;
+    }
+
+    .icon-service {
+      display: grid;
+      justify-items: center;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .icon-service svg {
+      width: 66px;
+      height: 66px;
+      color: var(--navy);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-service img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .icon-service h3 {
+      margin: 0;
+      max-width: 260px;
+      color: #3f4652;
+      font-size: 17px;
+      line-height: 1.18;
+      font-weight: 700;
+    }
+
+    .process {
+      display: grid;
+      gap: 12px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 16px;
+      align-items: start;
+      border: 1px solid var(--line);
+      padding: 16px;
+      background: var(--soft);
+    }
+
+    .step span {
+      color: var(--copper);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.38;
+      font-weight: 500;
+    }
+
+    .rate-page {
+      background: #0a1f3f;
+      color: #ffffff;
+    }
+
+    .rate-page .page-header {
+      border-bottom-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .rate-page h2,
+    .rate-page .kicker {
+      color: #ffffff;
+    }
+
+    .rate-page .kicker { color: #f2c36d; }
+    .rate-page .page-number { color: rgba(255, 255, 255, 0.18); }
+
+    .rate-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.055);
+      padding: 0;
+    }
+
+    .rate-card h3 {
+      margin: 0;
+      padding: 18px 18px 14px;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .rate-list {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 10px 18px 16px;
+      list-style: none;
+    }
+
+    .rate-list li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .rate-list li:last-child { border-bottom: 0; }
+
+    .fee {
+      color: #f2c36d;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .category-cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 54px 44px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.14), transparent 30%),
+        linear-gradient(145deg, #071e47 0%, #083b7e 54%, #0a66c2 100%);
+    }
+
+    .category-index {
+      color: rgba(255, 255, 255, 0.38);
+      font-size: 54px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .category-title {
+      margin: 0;
+      max-width: 620px;
+      color: #ffffff;
+      font-size: 48px;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+
+    .category-copy {
+      max-width: 620px;
+      margin-top: 26px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 14.5px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .category-includes {
+      max-width: 560px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 15px;
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    .starting-price {
+      color: #f2c36d;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .package-list {
+      display: grid;
+      gap: 0;
+      border-top: 1.5px solid var(--navy);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .package-header {
+      display: grid;
+      grid-template-columns: 0.55fr 1fr 116px;
+      gap: 20px;
+      padding: 9px 12px 10px;
+      border-bottom: 0;
+      color: #ffffff;
+      background: var(--navy);
+      font-size: 9.5px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .package-card {
+      display: grid;
+      grid-template-columns: 1fr 116px;
+      gap: 20px;
+      align-items: start;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      background: transparent;
+    }
+
+    .package-card:last-child {
+      border-bottom: 0;
+    }
+
+    .package-card > div {
+      display: grid;
+      grid-template-columns: 0.55fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .package-card h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 12.5px;
+      line-height: 1.25;
+      font-weight: 600;
+    }
+
+    .package-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.32;
+      font-weight: 500;
+    }
+
+    .package-price {
+      color: #9a663b;
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 700;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .pricing-guide {
+      position: relative;
+      height: 100%;
+      padding: 54px 58px 48px;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(17, 54, 105, 0.055) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, #fbfaf7 0%, #ffffff 100%);
+      background-size: 30px 30px, auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-guide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 100%;
+      background: #9a663b;
+    }
+
+    .pricing-guide.marketing-rate::before {
+      background: #0757b8;
+    }
+
+    .pricing-guide.event-rate::before {
+      background: #1f7a5a;
+    }
+
+    .pricing-guide .page-header {
+      border-bottom: 1px solid var(--line);
+      padding: 30px 0 16px;
+      margin-bottom: 24px;
+    }
+
+    .pricing-guide .kicker,
+    .pricing-guide h2 {
+      color: var(--navy);
+    }
+
+    .pricing-guide h2 {
+      max-width: 560px;
+      font-size: 24px;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .pricing-guide .page-number {
+      color: rgba(15, 23, 42, 0.12);
+    }
+
+    .pricing-table-card {
+      margin-top: 8px;
+      max-width: 680px;
+    }
+
+    .pricing-table-card .pricing-group + .pricing-group {
+      margin-top: 16px;
+    }
+
+    .pricing-table-head {
+      display: grid;
+      grid-template-columns: 1fr 118px;
+      gap: 28px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #9a663b;
+      color: #9a663b;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .pricing-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: baseline;
+      gap: 6px;
+      padding: 5px 0 0;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.14;
+      font-weight: 600;
+    }
+
+    .pricing-row .leader {
+      border-bottom: 2px dotted rgba(15, 23, 42, 0.34);
+      transform: translateY(-3px);
+    }
+
+    .pricing-row .amount {
+      min-width: 118px;
+      color: var(--navy);
+      font-size: 12.5px;
+      text-align: right;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .pricing-note {
+      margin-top: auto;
+      max-width: 620px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .pricing-guide.marketing-rate h2,
+    .pricing-guide.branding-rate h2,
+    .pricing-guide.event-rate h2 {
+      font-size: 24px;
+      max-width: 680px;
+      letter-spacing: -0.01em;
+    }
+
+    .rate-card-subtitle {
+      margin: 8px 0 0;
+      color: #9a663b;
+      font-size: 15px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .pricing-groups {
+      display: grid;
+      gap: 16px;
+      max-width: 680px;
+    }
+
+    .pricing-group-title {
+      margin: 0 0 7px;
+      color: #9a663b;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pricing-guide.marketing-rate .pricing-group-title {
+      color: #0757b8;
+    }
+
+    .pricing-guide.event-rate .pricing-group-title {
+      color: #1f7a5a;
+    }
+
+    .pricing-guide.event-rate .rate-card-subtitle {
+      color: #1f7a5a;
+    }
+
+    .pricing-guide.marketing-rate .pricing-table-head {
+      grid-template-columns: 1fr 118px;
+      padding-bottom: 7px;
+      border-bottom-width: 2px;
+      font-size: 11px;
+    }
+
+    .dense-rate-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      border: 1px solid #7d93b7;
+      font-size: 7.2px;
+      line-height: 1.12;
+      background: #ffffff;
+    }
+
+    .dense-rate-table th {
+      padding: 6px 7px;
+      border: 1px solid #064d9d;
+      color: #ffffff;
+      background: #0757b8;
+      font-size: 7.2px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+      text-align: left;
+    }
+
+    .dense-rate-table td {
+      padding: 4.2px 6px;
+      border: 1px solid #9aa8bf;
+      color: #142033;
+      font-weight: 500;
+      vertical-align: top;
+    }
+
+    .dense-rate-table tbody tr:last-child td {
+      border-bottom: 1px solid #9aa8bf;
+    }
+
+    .dense-rate-table tbody tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .dense-rate-table td:nth-child(1),
+    .dense-rate-table td:nth-child(2) {
+      color: #0b1f3f;
+      font-weight: 600;
+    }
+
+    .dense-rate-table td:nth-child(4) {
+      color: #0b1f3f;
+      font-weight: 700;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .dense-rate-table td:nth-child(5) {
+      color: #334155;
+      white-space: nowrap;
+    }
+
+    .terms-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .difference-table {
+      display: grid;
+      gap: 0;
+      border-top: 2px solid var(--navy);
+    }
+
+    .difference-row {
+      display: grid;
+      grid-template-columns: 0.8fr 1.25fr 1.15fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .difference-row strong {
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .difference-row span {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .note-block {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .section-subtitle {
+      margin: 26px 0 14px;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .term-row {
+      border-left: 4px solid var(--copper);
+      padding: 12px 0 12px 18px;
+    }
+
+    .term-row strong {
+      display: block;
+      color: var(--ink);
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .term-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.38;
+      font-weight: 500;
+    }
+
+    .contact-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 58px 54px 44px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.16), transparent 30%),
+        linear-gradient(145deg, #082a5f 0%, #0c3b7d 46%, #0a66c2 100%);
+    }
+
+    .contact-page h2 {
+      max-width: 620px;
+      color: #ffffff;
+      font-size: 54px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 16px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .about-creative-page {
+      padding: 54px 54px 44px;
+      background:
+        radial-gradient(circle at 6% 88%, rgba(10, 102, 194, 0.1), transparent 34%),
+        #ffffff;
+    }
+
+    .about-creative-title {
+      margin: 0;
+      max-width: 650px;
+      color: var(--ink);
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .about-creative-layout {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 28px;
+      margin-top: 34px;
+    }
+
+    .about-side-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      align-self: end;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .about-copy {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    .about-copy p {
+      margin: 0 0 12px;
+    }
+
+    .about-copy strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .profile-section {
+      margin-top: 56px;
+      padding-top: 18px;
+      border-top: 2px solid var(--navy);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px 24px;
+    }
+
+    .profile-card {
+      min-height: 128px;
+      padding: 0;
+    }
+
+    .profile-photo,
+    .profile-placeholder {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: rgba(8, 42, 95, 0.08);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      border: 1px solid rgba(8, 42, 95, 0.18);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .designer-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+    }
+
+    .designer-photo-frame {
+      overflow: hidden;
+    }
+
+    .profile-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 12.5px;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .profile-card span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.28;
+      font-weight: 500;
+    }
+
+    .profile-card.lead-profile {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      align-items: center;
+      column-gap: 18px;
+      min-height: 82px;
+    }
+
+    .lead-profile .profile-photo {
+      width: 74px;
+      height: 74px;
+      margin-bottom: 0;
+    }
+
+    .lead-profile strong {
+      font-size: 15px;
+    }
+
+    .lead-profile span {
+      max-width: 410px;
+      font-size: 12px;
+    }
+
+    .lead-profile .inline-role {
+      display: block;
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .partner-divider {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 4px 0 -2px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .partner-divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .about-page-pill {
+      position: absolute;
+      right: 54px;
+      bottom: 34px;
+      min-width: 56px;
+      padding: 7px 13px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .contact {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      bottom: 34px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      html,
+      body,
+      .document {
+        width: var(--print-page-width);
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+      }
+
+      .pdf-action { display: none !important; }
+
+      .page-shell.hidden-page { display: none !important; }
+
+      .page-shell {
+        width: var(--print-page-width);
+        height: var(--print-page-height);
+        margin: 0;
+        padding: 0;
+        break-after: page;
+        page-break-after: always;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .page-shell:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      .page {
+        width: var(--print-page-width);
+        height: var(--print-page-height);
+        margin: 0;
+        box-shadow: none;
+        transform: none;
+        break-after: auto;
+        page-break-after: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="pdf-action" type="button" onclick="window.print()">Print / Save PDF</button>
+
+  <main class="document">
+    <div class="page-shell">
+      <section class="page cover" aria-label="Cover page">
+        <div class="brand">VELNEX Business Management &amp; Operations FZE LLC</div>
+        <div class="cover-main">
+          <p class="kicker">Service Portfolio</p>
+          <h1>Velnex Design and Marketing Signature Service</h1>
+          <p class="cover-note">Structured creative, content, branding, campaign, and digital visibility support for businesses that need consistent presentation and market communication.</p>
+        </div>
+        <div class="cover-footer">
+          <span>UAE | India</span>
+          <span>www.velnex.in | operations@velnex.in</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page services-overview-page" aria-label="Service overview page">
+        <header class="page-header">
+          <div>
+            <p class="kicker">Service Portfolio</p>
+            <h2>Our Services</h2>
+          </div>
+          <div class="page-number">02</div>
+        </header>
+        <div class="page-body">
+          <div class="icon-service-grid" aria-label="Main service categories">
+            <div class="service-group-label">Design Services</div>
+            <article class="icon-service">
+              <img src="Service Icons/01_branding_rebranding.png" alt="Branding and rebranding icon">
+              <h3>Branding &amp; Rebranding</h3>
+            </article>
+            <article class="icon-service">
+              <img src="Service Icons/02_marketing_materials_digital_print.png" alt="Marketing materials digital and print icon">
+              <h3>Marketing Materials - Digital &amp; Print</h3>
+            </article>
+            <article class="icon-service">
+              <img src="Service Icons/03_event_corporate_print_design.png" alt="Event and corporate print design icon">
+              <h3>Event &amp; Corporate Print Design</h3>
+            </article>
+            <article class="icon-service">
+              <img src="Service Icons/04_documentation_presentation_design.png" alt="Business documentation and presentation design icon">
+              <h3>Business Documentation &amp; Presentation Design</h3>
+            </article>
+            <div class="service-group-label development">App Development</div>
+            <article class="icon-service wide">
+              <img src="Service Icons/05_digital_platform_design_support.png" alt="Digital platform design support icon">
+              <h3>Web &amp; App Development</h3>
+            </article>
+            <div class="service-group-label marketing">Digital Marketing</div>
+            <article class="icon-service wide">
+              <img src="Service Icons/06_digital_marketing_services.png" alt="Digital marketing services icon">
+              <h3>Digital Marketing Services</h3>
+            </article>
+          </div>
+        </div>
+        <div class="contact"><span>VELNEX</span><span>Graphic Design &amp; Digital Marketing Service Portfolio</span></div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page vision-page" aria-label="Service purpose and focus page">
+        <div class="vision-layout">
+          <h2 class="vision-title"><span>Service Purpose</span><span>&amp; Focus</span></h2>
+          <article class="mission-card">
+            <h3>Purpose</h3>
+            <p>This service category is created to support businesses with clear branding, consistent marketing materials, professional digital presence, and structured communication across online and offline platforms.</p>
+          </article>
+          <article class="vision-card">
+            <h3>Focus</h3>
+            <p>Through graphic design, digital platform support, content coordination, and digital marketing services, Velnex helps businesses present themselves clearly, communicate consistently, improve visibility, and connect with the right audience.</p>
+            <p>These services are part of Velnex's wider business management and operations model, where creative work, marketing activity, platforms, campaigns, reporting, and execution are connected to business objectives.</p>
+          </article>
+          <div class="vision-page-pill">P.03</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page about-creative-page" aria-label="About Velnex Creative and Digital Services page">
+        <h2 class="about-creative-title">About Velnex Creative &amp; Digital Services</h2>
+        <div class="about-creative-layout">
+          <div class="about-side-label">Creative and Digital Service Management</div>
+          <div>
+            <div class="about-copy">
+              <p><strong>Velnex Business Management &amp; Operations FZE LLC</strong> is a UAE-registered business management and operations company.</p>
+              <p>This portfolio presents the <strong>Graphic Design &amp; Digital Marketing</strong> service category under Velnex, created to support businesses with branding, marketing materials, business documentation, digital presence, campaign support, and online visibility.</p>
+              <p>Velnex does not treat design and digital marketing as isolated creative work. These services are connected to business objectives, communication needs, customer reach, lead generation, and execution planning.</p>
+              <p>Through this service category, Velnex works with qualified designers, developers, digital marketers, content professionals, freelancers, agencies, and specialist service partners.</p>
+              <p>Our role is to understand the business requirement, define the scope, coordinate the right professionals, manage communication, review deliverables, and support execution according to agreed timelines, quality expectations, and business goals.</p>
+            </div>
+            <div class="profile-section" aria-label="Service coordination and partner roles">
+              <article class="profile-card lead-profile">
+                <img class="profile-photo" src="https://lh3.googleusercontent.com/a/ACg8ocK8fs_rdpcYfLP4q7j9QcItkI7O2PVC7uQJkW1HxwEpYxcijqStSg=s360-c-no" alt="Velhari Sankaran">
+                <div>
+                  <strong>Velhari Sankaran</strong>
+                  <span class="inline-role">Founder / Manager, Client Coordination &amp; Service Management</span>
+                </div>
+              </article>
+              <div class="partner-divider">Service Delivery Partners</div>
+              <article class="profile-card">
+                <div class="profile-photo designer-photo-frame">
+                  <img class="designer-photo" src="https://pps.services.adobe.com/api/profile/88471EAF6756D1920A495FFB@AdobeID/image/349ef418-b304-4751-bc39-c9255cebab96/230" alt="Maneesha Kailas">
+                </div>
+                <strong>Maneesha Kailas</strong>
+                <span>Creative Designer</span>
+              </article>
+              <article class="profile-card">
+                <img class="profile-photo" src="https://res.cloudinary.com/dpfleawmr/image/upload/v1/media/profile/ajay_2_ogtwna" alt="Ajay A">
+                <strong>Ajay A</strong>
+                <span>Web Developer</span>
+              </article>
+              <article class="profile-card">
+                <div class="profile-placeholder">M</div>
+                <strong>Silpa</strong>
+                <span>Digital Marketer</span>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="about-page-pill">P.04</div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page category-cover" aria-label="Branding and rebranding category cover">
+        <div class="category-index">01</div>
+        <div>
+          <h2 class="category-title">Branding &amp; Rebranding</h2>
+          <p class="category-copy">Branding is the process of creating a clear and consistent identity for a business, organisation, product, or service. It helps people recognise, remember, and trust the business across different touchpoints such as logo, colours, typography, business cards, social media, brochures, websites, packaging, signboards, presentations, uniforms, and marketing materials. For any business in any sector, proper branding creates a professional first impression, improves market positioning, builds customer confidence, and gives the business a consistent visual and communication system that can be used in daily operations, marketing, sales, partnerships, and expansion.</p>
+          <p class="category-includes"><strong>Services include:</strong><br>Logo design, brand identity, rebranding support, brand kit, stationery, and basic brand guideline.</p>
+        </div>
+        <div class="starting-price">Starting from ₹7,500</div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Branding service difference page">
+        <header class="page-header"><div><p class="kicker">Branding Structure</p><h2>Branding &amp; Rebranding</h2></div><div class="page-number">06</div></header>
+        <div class="page-body">
+          <p class="intro">Branding is not limited to logo design. A logo is only one part of a business identity. A proper brand identity works like a visual SOP for the business, giving clear rules on how the brand should look and be used across documents, social media, websites, presentations, signboards, uniforms, invoices, quotations, brochures, packaging, and customer-facing communication. It helps business owners, employees, designers, agencies, printers, and marketing teams maintain consistency whenever anything is created for the brand. Velnex's Branding &amp; Rebranding service supports new and existing businesses by creating or improving their logo, colour system, typography, brand usage rules, stationery, digital profile assets, document templates, and basic brand guideline structure.</p>
+          <h3 class="section-subtitle">Service Difference</h3>
+          <div class="difference-table">
+            <div class="difference-row"><strong>Logo Design Only</strong><span>Creation of only the business logo or logo mark.</span><span>Suitable for businesses that only need a basic visual identity mark.</span></div>
+            <div class="difference-row"><strong>Brand Identity Design</strong><span>Complete visual system with logo, colours, fonts, usage rules, templates, and guideline.</span><span>Suitable for businesses that want consistent brand presentation across all platforms.</span></div>
+            <div class="difference-row"><strong>Rebranding</strong><span>Review and improvement of an existing brand identity.</span><span>Suitable for existing businesses with outdated, inconsistent, or unclear brand presentation.</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide branding-rate" aria-label="Branding and rebranding pricing guide">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Branding &amp; Rebranding</h2><p class="rate-card-subtitle">Identity Service Packages</p></div><div class="page-number">05</div></header>
+        <div class="pricing-table-card">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">01. Logo</h3>
+            <div class="pricing-row"><span>1.1 Basic</span><span class="leader"></span><span class="amount">₹ 3,000</span></div>
+            <div class="pricing-row"><span>1.2 Professional</span><span class="leader"></span><span class="amount">₹ 15,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">02. Brand Identity &amp; Guideline</h3>
+            <div class="pricing-row"><span>2.1 Basic</span><span class="leader"></span><span class="amount">₹ 12,500</span></div>
+            <div class="pricing-row"><span>2.2 Professional</span><span class="leader"></span><span class="amount">₹ 40,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">03. Re-branding</h3>
+            <div class="pricing-row"><span>3.1 Basic</span><span class="leader"></span><span class="amount">₹ 12,500</span></div>
+            <div class="pricing-row"><span>3.2 Professional</span><span class="leader"></span><span class="amount">₹ 40,000</span></div>
+          </div>
+        </div>
+        <div class="pricing-note">Rates are indicative for design service planning. Final quotation may vary based on scope, content readiness, revision requirements, file formats, and delivery timeline.</div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Branding add-ons and terms page">
+        <header class="page-header"><div><p class="kicker">Branding Notes</p><h2>Add-ons &amp; Payment Terms</h2></div><div class="page-number">08</div></header>
+        <div class="page-body">
+          <div class="package-list">
+            <div class="package-header"><span>Add-on</span><span>Description</span><span>Fee</span></div>
+            <article class="package-card"><div><h3>Extra business card variation</h3><p>Additional layout variation beyond the agreed package scope.</p></div><span class="package-price">₹750</span></article>
+            <article class="package-card"><div><h3>Additional document template</h3><p>Quotation, invoice, proposal, or similar brand-aligned document template.</p></div><span class="package-price">₹2,500</span></article>
+            <article class="package-card"><div><h3>Additional logo variation</h3><p>Extra approved logo layout or format beyond the package deliverables.</p></div><span class="package-price">₹2,500</span></article>
+            <article class="package-card"><div><h3>Brochure layout direction / sample guideline</h3><p>Visual direction for brochure layout under brand identity support.</p></div><span class="package-price">₹3,500</span></article>
+            <article class="package-card"><div><h3>Full service brochure design</h3><p>Handled separately under Marketing Materials category.</p></div><span class="package-price">Separate Quote</span></article>
+          </div>
+          <p class="note-block"><strong>Payment terms:</strong> 50% advance before starting work, 40% after first draft / progress stage, and 10% before final file delivery. Minor revisions include small text, colour, alignment, spacing, and layout corrections. New concepts, major content changes, printing, trademark registration, naming, photography, packaging, website development, paid fonts, stock images, and third-party costs are not included unless mentioned in the quotation.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page category-cover" aria-label="Marketing materials category cover">
+        <div class="category-index">02</div>
+        <div>
+          <h2 class="category-title">Marketing Materials - Digital &amp; Print</h2>
+          <p class="category-copy">Marketing materials are the visual and communication assets a business uses to promote its products, services, offers, events, and brand messages across digital and offline channels. These include posters, flyers, brochures, social media creatives, WhatsApp creatives, advertisements, catalogues, leaflets, and printed promotional materials. For any business, well-designed marketing materials help communicate clearly, attract attention, explain services, support sales conversations, improve campaign presentation, and maintain a professional brand image across customer-facing platforms.</p>
+          <p class="category-includes"><strong>Services include:</strong><br>Flyers, brochures, posters, social media creatives, advertisements, catalogues, and campaign assets.</p>
+        </div>
+        <div class="starting-price">Starting from ₹5,000</div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide marketing-rate" aria-label="Marketing materials digital rate card">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Marketing Materials</h2><p class="rate-card-subtitle">Digital Creative Services</p></div><div class="page-number">06</div></header>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">01. Social Media Design</h3>
+            <div class="pricing-row"><span>1.1 Single Social Media Poster</span><span class="leader"></span><span class="amount">₹400 - ₹800</span></div>
+            <div class="pricing-row"><span>1.2 Premium Social Media Poster</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,500</span></div>
+            <div class="pricing-row"><span>1.3 Festival / Greeting Poster</span><span class="leader"></span><span class="amount">₹400 - ₹800</span></div>
+            <div class="pricing-row"><span>1.4 Offer / Sale Poster</span><span class="leader"></span><span class="amount">₹400 - ₹800</span></div>
+            <div class="pricing-row"><span>1.5 Product / Service Poster</span><span class="leader"></span><span class="amount">₹400 - ₹800</span></div>
+            <div class="pricing-row"><span>1.6 Carousel Post - 3 Slides</span><span class="leader"></span><span class="amount">₹1,500 - ₹2,500</span></div>
+            <div class="pricing-row"><span>1.7 Carousel Post - 5 Slides</span><span class="leader"></span><span class="amount">₹2,500 - ₹4,000</span></div>
+            <div class="pricing-row"><span>1.8 Instagram / Facebook Story Creative</span><span class="leader"></span><span class="amount">₹300 - ₹700</span></div>
+            <div class="pricing-row"><span>1.9 WhatsApp Status Creative</span><span class="leader"></span><span class="amount">₹300 - ₹700</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">02. Video Support Design</h3>
+            <div class="pricing-row"><span>2.1 Reel Thumbnail</span><span class="leader"></span><span class="amount">₹300 - ₹700</span></div>
+            <div class="pricing-row"><span>2.2 YouTube Thumbnail</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+            <div class="pricing-row"><span>2.3 Video Cover / Title Card</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">03. Ad Creative Design</h3>
+            <div class="pricing-row"><span>3.1 Basic Ad Poster</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>3.2 Premium Ad Poster</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,500</span></div>
+            <div class="pricing-row"><span>3.3 Lead Generation Creative</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,500</span></div>
+            <div class="pricing-row"><span>3.4 Product Launch Creative</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">04. Digital Campaign Pack</h3>
+            <div class="pricing-row"><span>4.1 5 Basic Posters</span><span class="leader"></span><span class="amount">₹2,000 - ₹4,000</span></div>
+            <div class="pricing-row"><span>4.2 10 Basic Posters</span><span class="leader"></span><span class="amount">₹4,000 - ₹8,000</span></div>
+            <div class="pricing-row"><span>4.3 5 Premium Posters</span><span class="leader"></span><span class="amount">₹5,000 - ₹10,000</span></div>
+            <div class="pricing-row"><span>4.4 5 Posters + 5 Story Creatives</span><span class="leader"></span><span class="amount">₹6,000 - ₹12,000</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide marketing-rate" aria-label="Marketing materials print rate card">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Marketing Materials</h2><p class="rate-card-subtitle">Print &amp; Publication Services</p></div><div class="page-number">07</div></header>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">05. Flyer / Leaflet Design</h3>
+            <div class="pricing-row"><span>5.1 Single-Side Flyer</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>5.2 Double-Side Flyer</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+            <div class="pricing-row"><span>5.3 Promotional Leaflet</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,500</span></div>
+            <div class="pricing-row"><span>5.4 Product / Service Sheet</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">06. Brochure Design</h3>
+            <div class="pricing-row"><span>6.1 Bi-Fold Brochure</span><span class="leader"></span><span class="amount">₹2,000 - ₹5,000</span></div>
+            <div class="pricing-row"><span>6.2 Tri-Fold Brochure</span><span class="leader"></span><span class="amount">₹3,000 - ₹7,000</span></div>
+            <div class="pricing-row"><span>6.3 Multi-Page Brochure - Basic</span><span class="leader"></span><span class="amount">₹6,000+</span></div>
+            <div class="pricing-row"><span>6.4 Multi-Page Brochure - 8 Pages</span><span class="leader"></span><span class="amount">₹8,000 - ₹12,000</span></div>
+            <div class="pricing-row"><span>6.5 Multi-Page Brochure - 12 Pages</span><span class="leader"></span><span class="amount">₹12,000 - ₹18,000</span></div>
+            <div class="pricing-row"><span>6.6 Extra Brochure Page</span><span class="leader"></span><span class="amount">₹800 - ₹1,500 / page</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">07. Catalogue Design</h3>
+            <div class="pricing-row"><span>7.1 Product Catalogue - Basic</span><span class="leader"></span><span class="amount">₹6,000 - ₹10,000</span></div>
+            <div class="pricing-row"><span>7.2 Product Catalogue - Standard</span><span class="leader"></span><span class="amount">₹10,000 - ₹20,000</span></div>
+            <div class="pricing-row"><span>7.3 Extra Catalogue Page</span><span class="leader"></span><span class="amount">₹800 - ₹1,500 / page</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">08. Menu Card Design</h3>
+            <div class="pricing-row"><span>8.1 Simple Menu Card</span><span class="leader"></span><span class="amount">₹800 - ₹2,000</span></div>
+            <div class="pricing-row"><span>8.2 Premium Restaurant Menu</span><span class="leader"></span><span class="amount">₹3,000+</span></div>
+            <div class="pricing-row"><span>8.3 Multi-Page Menu</span><span class="leader"></span><span class="amount">₹4,000 - ₹10,000</span></div>
+            <div class="pricing-row"><span>8.4 Extra Menu Page</span><span class="leader"></span><span class="amount">₹700 - ₹1,500 / page</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide marketing-rate" aria-label="Marketing materials display and promotional rate card">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Marketing Materials</h2><p class="rate-card-subtitle">Display &amp; Promotional Document Services</p></div><div class="page-number">08</div></header>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">09. Event / Display Design</h3>
+            <div class="pricing-row"><span>9.1 Standee Design</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+            <div class="pricing-row"><span>9.2 Banner Design</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,500</span></div>
+            <div class="pricing-row"><span>9.3 Backdrop Design</span><span class="leader"></span><span class="amount">₹2,000 - ₹5,000</span></div>
+            <div class="pricing-row"><span>9.4 Poster for Print</span><span class="leader"></span><span class="amount">₹800 - ₹2,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">10. Promotional Document Design</h3>
+            <div class="pricing-row"><span>10.1 Offer Sheet</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>10.2 Rate Card Design</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,500</span></div>
+            <div class="pricing-row"><span>10.3 Service List Design</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,500</span></div>
+          </div>
+        </div>
+        <div class="pricing-note">Rates are indicative for design planning. Final pricing may vary based on content readiness, number of formats, revision scope, and delivery timeline.</div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page category-cover" aria-label="Event and corporate print category cover">
+        <div class="category-index">03</div>
+        <div>
+          <h2 class="category-title">Event &amp; Corporate Print Design</h2>
+          <p class="category-copy">Event and corporate print design supports businesses, organisations, institutions, and professionals in presenting their events, announcements, meetings, launches, workshops, exhibitions, and corporate communications in a professional manner. This category includes invitations, certificates, ID cards, standees, backdrops, banners, event posters, direction boards, sponsor panels, and formal print designs. Proper event and corporate design helps create a structured visual identity for occasions, improves professionalism, supports audience communication, and ensures that the business or organisation is represented clearly in public, internal, and formal settings.</p>
+          <p class="category-includes"><strong>Services include:</strong><br>Invitations, standees, backdrops, certificates, ID cards, signage, event brochures, and corporate print collateral.</p>
+        </div>
+        <div class="starting-price">Starting from ₹5,000</div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide event-rate" aria-label="Event and corporate invitation rate card">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Event &amp; Corporate Print Design</h2><p class="rate-card-subtitle">Invitations, Posters &amp; Certificates</p></div><div class="page-number">09</div></header>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">01. Event Invitation Design</h3>
+            <div class="pricing-row"><span>1.1 Basic Event Invitation</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>1.2 Premium Event Invitation</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+            <div class="pricing-row"><span>1.3 WhatsApp Invitation Creative</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+            <div class="pricing-row"><span>1.4 Email Invitation Header</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">02. Event Poster Design</h3>
+            <div class="pricing-row"><span>2.1 Basic Event Poster</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>2.2 Premium Event Poster</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+            <div class="pricing-row"><span>2.3 Speaker Announcement Poster</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>2.4 Chief Guest / Guest Poster</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>2.5 Countdown Poster</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+            <div class="pricing-row"><span>2.6 Thank You / Event Completion Poster</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">03. Certificate Design</h3>
+            <div class="pricing-row"><span>3.1 Participation Certificate</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>3.2 Appreciation Certificate</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>3.3 Award Certificate</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>3.4 Certificate Template Set</span><span class="leader"></span><span class="amount">₹2,000 - ₹4,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">04. ID Card / Badge Design</h3>
+            <div class="pricing-row"><span>4.1 Basic ID Card Design</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>4.2 Event Badge Design</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>4.3 Staff / Volunteer Badge</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>4.4 VIP / Guest Badge</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide event-rate" aria-label="Event and corporate display rate card">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Event &amp; Corporate Print Design</h2><p class="rate-card-subtitle">Display, Signage &amp; Event Stationery</p></div><div class="page-number">10</div></header>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">05. Standee Design</h3>
+            <div class="pricing-row"><span>5.1 Basic Standee Design</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+            <div class="pricing-row"><span>5.2 Premium Standee Design</span><span class="leader"></span><span class="amount">₹2,500 - ₹5,000</span></div>
+            <div class="pricing-row"><span>5.3 Product / Service Standee</span><span class="leader"></span><span class="amount">₹2,000 - ₹4,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">06. Banner Design</h3>
+            <div class="pricing-row"><span>6.1 Event Banner Design</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,500</span></div>
+            <div class="pricing-row"><span>6.2 Corporate Banner Design</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+            <div class="pricing-row"><span>6.3 Sponsor Banner Design</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">07. Backdrop Design</h3>
+            <div class="pricing-row"><span>7.1 Basic Stage Backdrop</span><span class="leader"></span><span class="amount">₹2,000 - ₹4,000</span></div>
+            <div class="pricing-row"><span>7.2 Premium Stage Backdrop</span><span class="leader"></span><span class="amount">₹4,000 - ₹8,000</span></div>
+            <div class="pricing-row"><span>7.3 Press Meet / Media Backdrop</span><span class="leader"></span><span class="amount">₹3,000 - ₹6,000</span></div>
+            <div class="pricing-row"><span>7.4 Step and Repeat Logo Backdrop</span><span class="leader"></span><span class="amount">₹2,000 - ₹4,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">08. Event Signage Design</h3>
+            <div class="pricing-row"><span>8.1 Welcome Board</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>8.2 Direction Board</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>8.3 Registration Desk Board</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+            <div class="pricing-row"><span>8.4 Sponsor Panel</span><span class="leader"></span><span class="amount">₹1,500 - ₹3,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">09. Event Stationery</h3>
+            <div class="pricing-row"><span>9.1 Agenda / Programme Sheet</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>9.2 Event Schedule Card</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>9.3 Table Name Card</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+            <div class="pricing-row"><span>9.4 Seat / Reserved Card</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+            <div class="pricing-row"><span>9.5 Coupon / Token Design</span><span class="leader"></span><span class="amount">₹800 - ₹1,500</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <section class="page pricing-guide event-rate" aria-label="Event and corporate kit and add-on rate card">
+        <header class="page-header"><div><p class="kicker">Rate Card</p><h2>Event &amp; Corporate Print Design</h2><p class="rate-card-subtitle">Corporate Communication, Kits &amp; Add-ons</p></div><div class="page-number">11</div></header>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">10. Corporate Communication Design</h3>
+            <div class="pricing-row"><span>10.1 Corporate Notice Design</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>10.2 Internal Announcement Design</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+            <div class="pricing-row"><span>10.3 Office Display Notice</span><span class="leader"></span><span class="amount">₹1,000 - ₹2,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">11. Event Design Kit</h3>
+            <div class="pricing-row"><span>11.1 Basic Event Kit</span><span class="leader"></span><span class="amount">₹5,000 - ₹8,000</span></div>
+            <div class="pricing-row"><span>11.2 Corporate Event Kit</span><span class="leader"></span><span class="amount">₹10,000 - ₹18,000</span></div>
+            <div class="pricing-row"><span>11.3 Full Event Branding Kit</span><span class="leader"></span><span class="amount">₹20,000 - ₹40,000</span></div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-group-title">12. Add-On</h3>
+            <div class="pricing-row"><span>12.1 Additional Size Adaptation</span><span class="leader"></span><span class="amount">₹300 - ₹500 / size</span></div>
+            <div class="pricing-row"><span>12.2 Extra Minor Revision</span><span class="leader"></span><span class="amount">₹300 - ₹500</span></div>
+            <div class="pricing-row"><span>12.3 Additional Language Version</span><span class="leader"></span><span class="amount">₹500 - ₹1,000</span></div>
+            <div class="pricing-row"><span>12.4 Urgent Delivery</span><span class="leader"></span><span class="amount">₹500 - ₹2,000 extra</span></div>
+            <div class="pricing-row"><span>12.5 Editable Source File Handover</span><span class="leader"></span><span class="amount">Custom</span></div>
+            <div class="pricing-row"><span>12.6 Print-Ready File Preparation</span><span class="leader"></span><span class="amount">₹500 - ₹1,500</span></div>
+          </div>
+        </div>
+        <div class="pricing-note">Rates are indicative for event and corporate design planning. Final pricing may vary based on event scale, number of formats, content readiness, and delivery timeline.</div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Event and corporate packages page">
+        <header class="page-header"><div><p class="kicker">Event Packages</p><h2>Event &amp; Corporate Packages</h2></div><div class="page-number">14</div></header>
+        <div class="page-body"><div class="package-list">
+          <div class="package-header"><span>Service</span><span>Description</span><span>Fee</span></div>
+          <article class="package-card"><div><h3>Event Invitation / Announcement</h3><p>Digital and print-ready invitation or event announcement design.</p></div><span class="package-price">From ₹2,500</span></article>
+          <article class="package-card"><div><h3>Event Print Kit</h3><p>Standees, banners, badges, certificates, and basic event signage assets.</p></div><span class="package-price">From ₹15,000</span></article>
+          <article class="package-card"><div><h3>Corporate Presentation Material</h3><p>Branded documents and print assets for meetings, seminars, and business events.</p></div><span class="package-price">From ₹10,000</span></article>
+          <article class="package-card"><div><h3>Exhibition / Stall Design Support</h3><p>Visual layout support for stall panels, backdrops, print surfaces, and display communication.</p></div><span class="package-price">Custom Quote</span></article>
+        </div></div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page category-cover" aria-label="Business documentation category cover">
+        <div class="category-index">04</div>
+        <div>
+          <h2 class="category-title">Business Documentation &amp; Presentation Design</h2>
+          <p class="category-copy">Business documentation and presentation design helps businesses convert information into professional, readable, and well-structured documents for clients, investors, partners, vendors, employees, and internal decision-making. This includes company profiles, proposals, pitch decks, reports, case studies, service rate cards, capability statements, business presentations, and PDF documents. For any business or organisation, properly designed documents improve credibility, make communication easier, support sales and investor discussions, and help present services, plans, performance, and business value in a clear and organised way.</p>
+          <p class="category-includes"><strong>Services include:</strong><br>Company profiles, pitch decks, proposals, quotations, reports, presentations, and PDF-ready documents.</p>
+        </div>
+        <div class="starting-price">Starting from ₹10,000</div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Documentation and presentation packages page">
+        <header class="page-header"><div><p class="kicker">Documentation Packages</p><h2>Documentation &amp; Presentation Packages</h2></div><div class="page-number">16</div></header>
+        <div class="page-body"><div class="package-list">
+          <div class="package-header"><span>Service</span><span>Description</span><span>Fee</span></div>
+          <article class="package-card"><div><h3>Company Profile Design</h3><p>Professional company profile layout in PDF-ready format.</p></div><span class="package-price">From ₹15,000</span></article>
+          <article class="package-card"><div><h3>Pitch Deck / Investor Deck</h3><p>Structured deck design for investors, partners, or business presentations.</p></div><span class="package-price">From ₹20,000</span></article>
+          <article class="package-card"><div><h3>Proposal / Quotation Template</h3><p>Reusable proposal or quotation design aligned to brand presentation.</p></div><span class="package-price">From ₹10,000</span></article>
+          <article class="package-card"><div><h3>Report / PDF Document Design</h3><p>Print-ready report, portfolio, service guide, or operating document layout.</p></div><span class="package-price">Custom Quote</span></article>
+        </div></div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page category-cover" aria-label="Digital platform category cover">
+        <div class="category-index">05</div>
+        <div>
+          <h2 class="category-title">Digital Platform Design Support</h2>
+          <p class="category-copy">Digital platform design support helps businesses plan and present their online systems, websites, landing pages, portals, dashboards, forms, and digital interfaces in a clear and user-friendly way before or during development. This service focuses on layout, structure, user flow, visual hierarchy, and content placement so that the platform is easier to understand and use. For businesses in any sector, proper platform design improves digital presentation, supports lead generation, reduces user confusion, improves customer experience, and helps developers build websites or systems with better clarity and direction.</p>
+          <p class="category-includes"><strong>Services include:</strong><br>Website design support, landing pages, content structure, UI direction, portfolio pages, and web/app development coordination.</p>
+        </div>
+        <div class="starting-price">Starting from ₹20,000</div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Digital platform packages page">
+        <header class="page-header"><div><p class="kicker">Digital Platform Packages</p><h2>Digital Platform Packages</h2></div><div class="page-number">18</div></header>
+        <div class="page-body"><div class="package-list">
+          <div class="package-header"><span>Service</span><span>Description</span><span>Fee</span></div>
+          <article class="package-card"><div><h3>Landing Page Design</h3><p>Single landing page structure and visual design for lead generation or offer presentation.</p></div><span class="package-price">From ₹20,000</span></article>
+          <article class="package-card"><div><h3>Business Website Design Support</h3><p>Website structure, section planning, page design, and developer coordination.</p></div><span class="package-price">From ₹35,000</span></article>
+          <article class="package-card"><div><h3>Web / Digital App UI Support</h3><p>UI direction, screen planning, and design support for simple web apps or portals.</p></div><span class="package-price">Custom Quote</span></article>
+          <article class="package-card"><div><h3>Website Content &amp; Portfolio Setup</h3><p>Content structure, page copy support, portfolio presentation, and publishing coordination.</p></div><span class="package-price">Custom Quote</span></article>
+        </div></div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page category-cover" aria-label="Digital marketing category cover">
+        <div class="category-index">06</div>
+        <div>
+          <h2 class="category-title">Digital Marketing Services</h2>
+          <p class="category-copy">Digital marketing helps businesses build visibility, communicate with the right audience, generate enquiries, and support growth through online platforms such as social media, Google, websites, search engines, paid ads, content, and local business listings. It includes social media management, content planning, Meta ads, Google ads, SEO support, Google Business Profile support, campaign planning, lead tracking, and reporting. For any business, structured digital marketing helps improve online presence, attract potential customers, maintain consistent communication, measure campaign performance, and connect marketing activities with actual business objectives.</p>
+          <p class="category-includes"><strong>Services include:</strong><br>Social media management, content calendar, campaign creatives, ad coordination, basic SEO support, analytics, and reporting.</p>
+        </div>
+        <div class="starting-price">Starting from ₹15,000 / Month</div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Digital marketing packages page">
+        <header class="page-header"><div><p class="kicker">Digital Marketing Packages</p><h2>Digital Marketing Packages</h2></div><div class="page-number">20</div></header>
+        <div class="page-body"><div class="package-list">
+          <div class="package-header"><span>Service</span><span>Description</span><span>Fee</span></div>
+          <article class="package-card"><div><h3>Social Media Starter</h3><p>Basic monthly content calendar, post coordination, and creative support.</p></div><span class="package-price">From ₹15,000 / Month</span></article>
+          <article class="package-card"><div><h3>Social Media Management</h3><p>Regular posts, captions, scheduling support, page monitoring, and monthly review.</p></div><span class="package-price">From ₹25,000 / Month</span></article>
+          <article class="package-card"><div><h3>Campaign Coordination</h3><p>Campaign planning, creative coordination, ad setup support, and performance review.</p></div><span class="package-price">Custom Quote</span></article>
+          <article class="package-card"><div><h3>Digital Visibility Support</h3><p>Basic SEO, Google Business Profile support, website content updates, and reporting.</p></div><span class="package-price">Custom Quote</span></article>
+        </div></div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page" aria-label="Standard terms page">
+        <header class="page-header"><div><p class="kicker">Terms</p><h2>Standard Terms</h2></div><div class="page-number">21</div></header>
+        <div class="page-body"><div class="terms-grid">
+          <div class="term-row"><strong>Scope Confirmation</strong><span>Final pricing and timelines are confirmed after reviewing business requirements, content readiness, number of deliverables, and revision expectations.</span></div>
+          <div class="term-row"><strong>Content &amp; Approvals</strong><span>Client must provide required content, references, access, and approval feedback within agreed timelines to avoid delivery delays.</span></div>
+          <div class="term-row"><strong>Revisions</strong><span>Packages include reasonable revisions within the agreed scope. Major direction changes, new content, or additional sizes may be billed separately.</span></div>
+          <div class="term-row"><strong>Third-Party Costs</strong><span>Printing, domain, hosting, paid ads, software, stock assets, plugins, and external vendor charges are billed separately unless included in writing.</span></div>
+          <div class="term-row"><strong>Delivery Files</strong><span>Final exports are shared in agreed formats. Editable source files are shared only when included in the confirmed scope.</span></div>
+          <div class="term-row"><strong>Payment Terms</strong><span>Advance payment may be required before starting work. Retainer services are billed monthly unless otherwise agreed.</span></div>
+        </div></div>
+      </section>
+    </div>
+
+    <div class="page-shell hidden-page">
+      <section class="page contact-page" aria-label="Contact and work with Velnex page">
+        <div class="brand">VELNEX Business Management &amp; Operations FZE LLC</div>
+        <div>
+          <p class="kicker">Work With Velnex</p>
+          <h2>Start with a clear requirement review.</h2>
+          <p class="cover-note">Velnex can review your branding, marketing materials, digital presence, and campaign support requirements, then prepare a suitable scope, delivery plan, and quotation.</p>
+        </div>
+        <div class="contact-details">
+          <span>www.velnex.in</span>
+          <span>operations@velnex.in</span>
+          <span>UAE | India</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var pageWidth = 794;
+      var sidePadding = 36;
+
+      function setPageScale() {
+        if (window.matchMedia && window.matchMedia("print").matches) {
+          document.documentElement.style.setProperty("--page-scale", "1");
+          return;
+        }
+        var available = Math.max(320, window.innerWidth - sidePadding);
+        var scale = Math.min(1, available / pageWidth);
+        document.documentElement.style.setProperty("--page-scale", String(scale));
+      }
+
+      window.addEventListener("resize", setPageScale);
+      window.addEventListener("beforeprint", function () {
+        document.documentElement.style.setProperty("--page-scale", "1");
+      });
+      window.addEventListener("afterprint", setPageScale);
+      setPageScale();
+    }());
+  </script>
+</body>
+</html>
+
+
