@@ -1193,6 +1193,8 @@
       * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
       }
 
       html,
@@ -1207,6 +1209,12 @@
       .pdf-action { display: none !important; }
 
       .page-shell.hidden-page { display: none !important; }
+
+      img,
+      .profile-photo,
+      .designer-photo {
+        display: none !important;
+      }
 
       .page-shell {
         width: var(--print-page-width);
@@ -1232,6 +1240,25 @@
         transform: none;
         break-after: auto;
         page-break-after: auto;
+        overflow: hidden;
+      }
+
+      .cover,
+      .vision-page,
+      .category-cover,
+      .contact-page {
+        background: #082a5f !important;
+      }
+
+      .pricing-guide {
+        background: #ffffff !important;
+        background-image: none !important;
+      }
+
+      .about-creative-page,
+      .services-overview-page,
+      .page:not(.cover):not(.vision-page):not(.category-cover):not(.contact-page):not(.pricing-guide) {
+        background: #ffffff !important;
       }
     }
   </style>
